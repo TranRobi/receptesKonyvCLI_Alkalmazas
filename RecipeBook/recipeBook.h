@@ -8,8 +8,13 @@ class RecipeBook{
     Recipe* recipeBook;
     public:
         RecipeBook();
-        Recipe& searchForRecipe(int id);
-        Recipe& searchForRecipe(const string& name);
-        
-};
+        Recipe& searchForRecipe(int);
+        Recipe& searchForRecipe(const string&);
+        void listRecipeBook(const RecipeBook&);
+        void editRecipeName(int id, string name);
+        void editRecipeIngridient(int id, Ingridient* ing);
+        void editRecipeDescription(int id, string description);
+        void deleteRecipe(int id);
+        void addRecipe();
+    };
 #endif

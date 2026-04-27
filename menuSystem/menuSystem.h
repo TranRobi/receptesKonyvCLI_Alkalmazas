@@ -2,9 +2,13 @@
 #define MENUSYSTEM_H
 
 class MenuSystem{
-    static bool exitingMenu;
+    private:
+        bool exitingMenu;
     public:
-    void printMenu();
-    bool exitMenu();
+        MenuSystem();
+        void printMenu();
+        void exitMenu();
+        bool getExitingMenu() const;
+    
 };
 #endif

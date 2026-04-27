@@ -5,15 +5,16 @@
 
 using namespace std;
 class Ingridient{
+    private:
         string name;
         int amount;
         string unit;
     public:
         Ingridient(string& name, int amount, string& unit);
         ~Ingridient();
-        string& getName() const;
-        int getAmount() const;
-        string& getUnit() const;
+        const string& getName() const;
+         const int getAmount() const;
+        const string& getUnit() const;
 
         void setName(const string& newName);
         void setAmount(int newAmount);
