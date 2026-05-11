@@ -1,14 +1,21 @@
 #ifndef MENUSYSTEM_H
 #define MENUSYSTEM_H
 
-class MenuSystem{
+class MenuSystem {
     private:
         bool exitingMenu;
     public:
         MenuSystem();
-        void printMenu();
+        ~MenuSystem();
+
+        void printMainMenu() const;
+        void printReceptMenu() const;
+        void printAlapanyagMenu() const;
+        void printKategoriaMenu() const;
+
         void exitMenu();
         bool getExitingMenu() const;
-    
+        int  getMenuChoice() const;
 };
+
 #endif

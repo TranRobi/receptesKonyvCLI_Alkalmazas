@@ -9,11 +9,11 @@ Recipe::~Recipe(){
 
 }
 const string& Recipe::getName() const{
-
+    return name;
 }
 
 const Ingridient* Recipe::getIngridients() const {
-
+    return ingridients;
 }
 
 void Recipe::setName(const string& newName){

@@ -1,25 +1,41 @@
 #include "ingridient.h"
+#include <ostream>
 
-Ingridient::Ingridient(const string& name, int amount, const string& unit) : name(name), amount(amount), unit(unit){
+Ingridient::Ingridient() : id(0), name(""), unit("") {}
+
+Ingridient::Ingridient(int id, const string& name, const string& unit)
+    : id(id), name(name), unit(unit) {}
+
+Ingridient::~Ingridient() {}
+
+int Ingridient::getId() const {
+    return id;
 }
-Ingridient::~Ingridient(){
-}
-const string& Ingridient::getName() const{
+
+const string& Ingridient::getName() const {
     return name;
 }
-const string& Ingridient::getUnit() const{
+
+const string& Ingridient::getUnit() const {
     return unit;
 }
 
-const int Ingridient::getAmount() const{
-    return amount;
+void Ingridient::setId(int newId) {
+    id = newId;
 }
-void Ingridient::setAmount(int newAmount){
-    amount = newAmount;
-}
-void Ingridient::setName(const string& newName){
+
+void Ingridient::setName(const string& newName) {
     name = newName;
 }
-void Ingridient::setUnit(const string& newUnit){
+
+void Ingridient::setUnit(const string& newUnit) {
     unit = newUnit;
+}
+
+void Ingridient::print(ostream& os) const {
+    os << "[" << id << "] " << name << " (" << unit << ")\n";
+}
+
+bool Ingridient::operator==(const Ingridient& other) const {
+    return id == other.id;
 }

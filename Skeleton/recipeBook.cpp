@@ -4,9 +4,10 @@ RecipeBook::RecipeBook(){
 
 }
 Recipe& RecipeBook::searchForRecipe(int id){
+    return recipeBook[0];
 }
 Recipe& RecipeBook::searchForRecipe(const string& name){
-
+    return recipeBook[0];
 }
 void RecipeBook::listRecipeBook(const RecipeBook&){}
 void RecipeBook::editRecipeName(int id, string name){}

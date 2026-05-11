@@ -1,5 +1,5 @@
-Gulyasleves;Marhahus:500:g,Burgonya:400:g,Voroshagyma:2:db,Paprika:1:ek;Piritstuk meg a hagymat majd adjuk hozza a hust es a fuszereket. Vegul fozzuk keszre a burgonyaval.
-Palacsinta;Liszt:250:g,Tej:500:ml,Tojas:2:db,Etolaj:2:ek;Keverjuk csomomentesre a hozzavalokat majd forro serpenyoben sussunk vekony tiszatakat.
-Porkolt;Serteshus:600:g,Hagyma:3:db,Zsir:1:ek,Fuszerso:1:tk;A hagymat uvegere piritjuk a zsiron majd a hussal es keves vizzel puhara paroljuk.
-Bolognai;Daralthus:500:g,Paradicsomszosz:400:ml,Spagetti:500:g,Sajt:100:g;A hust megpiritjuk a szosszal osszefozzuk es a kifott tesztara ontve sajttal tálaljuk.
-rantotta;Tojas:3:db,Szalonna:50:g,So:1:csipet;A szalonnat kisutjuk majd a felvert tojasokat ranyomjuk es kozepes langon keszre sutjuk.
+1,Gulyasleves,Piritstuk meg a hagymat majd adjuk hozza a hust es a fuszereket. Vegul fozzuk keszre a burgonyaval.,EBED,120
+2,Palacsinta,Keverjuk csomomentesre a hozzavalokat majd forro serpenyoben sussunk vekony tiszatakat.,REGGELI,30
+3,Porkolt,A hagymat uvegere piritjuk a zsiron majd a hussal es keves vizzel puhara paroljuk.,EBED,90
+4,Bolognai,A hust megpiritjuk a szosszal osszefozzuk es a kifott tesztara ontve sajttal talaljuk.,EBED,60
+5,Rantotta,A szalonnat kisutjuk majd a felvert tojasokat ranyomjuk es kozepes langon keszre sutjuk.,REGGELI,15

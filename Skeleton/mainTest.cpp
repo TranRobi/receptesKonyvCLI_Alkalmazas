@@ -1,15 +1,16 @@
 #include <iostream>
 #include <string>
-#include "ingridient.h"
+#include "fileManager.h"
+#include "menuSystem.h"
 #include "recipe.h"
-#include "recipebook.h"
-#include "filemanager.h"
-#include "menusystem.h"
+#include "recipeBook.h"
+
+#include "memtrace.h"
+
 
 int main() {
     MenuSystem menu;
     menu.printMenu();
-    bool isExiting = menu.getExitingMenu();
 
     Ingridient* tesztIng = new Ingridient("Cukor", 200, "g");
 

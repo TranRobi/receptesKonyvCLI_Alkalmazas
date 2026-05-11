@@ -11,6 +11,7 @@ class Recipe{
     Ingridient* ingridients;
     string description;
     public:
+        Recipe(){}
         Recipe(const string& name, Ingridient* Ingridients, const string& description);
         ~Recipe();
         const string& getName() const;

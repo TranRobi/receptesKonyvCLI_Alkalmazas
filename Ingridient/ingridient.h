@@ -2,23 +2,31 @@
 #define INGRIDIENT_H
 
 #include <string>
+#include <ostream>
 
 using namespace std;
-class Ingridient{
+
+class Ingridient {
     private:
+        int id;
         string name;
-        int amount;
         string unit;
     public:
-        Ingridient(const string& name, int amount, const string& unit);
+        Ingridient();
+        Ingridient(int id, const string& name, const string& unit);
         ~Ingridient();
+
+        int getId() const;
         const string& getName() const;
-         const int getAmount() const;
         const string& getUnit() const;
 
+        void setId(int newId);
         void setName(const string& newName);
-        void setAmount(int newAmount);
         void setUnit(const string& newUnit);
 
+        // Kiiratas: "id,nev,unit"
+        void print(ostream& os) const;
+        bool operator==(const Ingridient& other) const;
 };
+
 #endif
