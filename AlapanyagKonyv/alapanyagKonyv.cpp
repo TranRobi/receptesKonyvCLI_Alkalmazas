@@ -1,4 +1,6 @@
 #include "alapanyagKonyv.h"
+#include "../memtrace.h"
+
 
 AlapanyagKonyv::AlapanyagKonyv() {}
 

@@ -1,7 +1,9 @@
-#include "fileManager.h"
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include "fileManager.h"
+#include "../memtrace.h"
+
 
 FileManager::FileManager() {}
 
@@ -75,7 +77,7 @@ bool FileManager::readReceptek(const string& file, vector<Recipe>& receptek) {
         getline(ss, katStr, ',');
         getline(ss, idoStr, ',');
         try {
-            receptek.push_back(Recipe(stoi(idStr), nev, leiras, Recipe::stringToKategoria(katStr), stoi(idoStr)));
+            receptek.push_back(Recipe(stoi(idStr), nev.c_str(), leiras.c_str(), Recipe::stringToKategoria(katStr), stoi(idoStr)));
         } catch (...) {}
     }
     return true;

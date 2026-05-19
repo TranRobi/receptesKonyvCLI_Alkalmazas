@@ -1,5 +1,8 @@
+#include <iostream>
 #include "hozzavalokLista.h"
 #include "../Ingridient/ingridient.h"
+#include "../AlapanyagKonyv/alapanyagKonyv.h"
+#include "../memtrace.h"
 
 HozzavalokLista::HozzavalokLista() {}
 
@@ -81,5 +84,28 @@ void HozzavalokLista::listForRecipe(int recipeID, const vector<Ingridient>& alap
         } else {
             os << "  - [AlapanyagID=" << item.getIngridientID() << "]: " << item.getAmount() << "\n";
         }
+    }
+}
+
+void HozzavalokLista::bekerHozzavalokConsole(int recipeID, const AlapanyagKonyv& alapanyagKonyv) {
+    cout << "Elerheto alapanyagok:\n";
+    alapanyagKonyv.listAlapanyagok(cout);
+    cout << "Add meg a hozzavalokat (Alapanyag ID es Mennyiseg, 0 = kesz):\n";
+    int hId, hAmount;
+    while (true) {
+        cout << "  Alapanyag ID: "; cin >> hId;
+        if (hId == 0) break;
+        
+        bool found = false;
+        for (const auto& a : alapanyagKonyv.getAlapanyagok()) {
+            if (a.getId() == hId) { found = true; break; }
+        }
+        if (!found) {
+            cout << "  Nincs ilyen alapanyag, proba ujra.\n";
+            continue;
+        }
+        
+        cout << "  Mennyiseg: "; cin >> hAmount;
+        addHozzavalo(recipeID, hId, hAmount);
     }
 }

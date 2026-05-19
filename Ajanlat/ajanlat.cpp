@@ -1,5 +1,8 @@
 #include "ajanlat.h"
 #include <iostream>
+#include "../AlapanyagKonyv/alapanyagKonyv.h"
+#include "../memtrace.h"
+
 
 Ajanlat::Ajanlat() : preferaltKategoria(Kategoria::ISMERETLEN) {}
 
@@ -111,5 +114,50 @@ void Ajanlat::listAjanlatok(ostream& os) const {
     }
     for (const auto& r : ajanlott) {
         r.print(os);
+        os << "  Hozzavalok:\n";
+        bool vanHozzavalo = false;
+        for (const auto& h : hozzavalok) {
+            if (h.getRecipeID() == r.getId()) {
+                vanHozzavalo = true;
+                const Ingridient* alap = nullptr;
+                for (const auto& a : alapanyagok) {
+                    if (a.getId() == h.getIngridientID()) {
+                        alap = &a;
+                        break;
+                    }
+                }
+                if (alap) {
+                    os << "  - " << alap->getName() << ": " << h.getAmount() << " " << alap->getUnit() << "\n";
+                } else {
+                    os << "  - [AlapanyagID=" << h.getIngridientID() << "]: " << h.getAmount() << "\n";
+                }
+            }
+        }
+        if (!vanHozzavalo) {
+            os << "  (Nincsenek hozzavalok)\n";
+        }
+    }
+}
+
+void Ajanlat::bekerTiltottAlapanyagokConsole() {
+    cout << "Tiltott alapanyagok ID-jai (0 = kesz, -1 = nincs tiltott):\n";
+    int tId; cin >> tId;
+    if (tId == -1) return;
+    while (tId != 0) {
+        addTiltott(tId);
+        cin >> tId;
+    }
+}
+
+void Ajanlat::bekerElerhetoAlapanyagokConsole(const AlapanyagKonyv& alapanyagKonyv) {
+    elerhetoAlapanyagIds.clear();
+    cout << "Elerheto alapanyagok:\n";
+    alapanyagKonyv.listAlapanyagok(cout);
+    cout << "Add meg az elerheto alapanyagok ID-jait (0 = kesz, -1 = mindet elfogadom):\n";
+    int aId; cin >> aId;
+    if (aId == -1) return;
+    while (aId != 0) {
+        addElerhetoAlapanyag(aId);
+        cin >> aId;
     }
 }

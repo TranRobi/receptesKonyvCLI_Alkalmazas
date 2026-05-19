@@ -1,6 +1,6 @@
-#include "ingridient.h"
 #include <ostream>
-
+#include "ingridient.h"
+#include "../memtrace.h"
 Ingridient::Ingridient() : id(0), name(""), unit("") {}
 
 Ingridient::Ingridient(int id, const string& name, const string& unit)

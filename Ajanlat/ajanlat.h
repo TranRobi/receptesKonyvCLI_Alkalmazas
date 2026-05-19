@@ -3,9 +3,9 @@
 
 #include <vector>
 #include <ostream>
-#include "recipe.h"
-#include "hozzaValok.h"
-#include "ingridient.h"
+#include "../Recipe/recipe.h"
+#include "../HozzaValok/hozzaValok.h"
+#include "../Ingridient/ingridient.h"
 
 using namespace std;
 
@@ -50,6 +50,10 @@ class Ajanlat {
         virtual vector<Recipe> ajanlatKeszit() const = 0;
 
         void listAjanlatok(ostream& os) const;
+
+        // Konzolos bekeresek
+        void bekerTiltottAlapanyagokConsole();
+        void bekerElerhetoAlapanyagokConsole(const class AlapanyagKonyv& alapanyagKonyv);
 };
 
 #endif

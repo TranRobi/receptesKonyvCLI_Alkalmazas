@@ -1,4 +1,6 @@
 #include "kategoriaIdoAjanlat.h"
+#include "../../memtrace.h"
+
 
 KategoriaIdoAjanlat::KategoriaIdoAjanlat() : maxElkeszitesiIdo(0) {}
 

@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <ostream>
-#include "ingridient.h"
+#include "../Ingridient/ingridient.h"
 
 using namespace std;
 

@@ -1,5 +1,7 @@
 #include "hetisMenuAjanlat.h"
 #include <iostream>
+#include "../../memtrace.h"
+
 
 HetisMenuAjanlat::HetisMenuAjanlat() {}
 

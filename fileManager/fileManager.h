@@ -3,9 +3,9 @@
 
 #include <string>
 #include <vector>
-#include "ingridient.h"
-#include "hozzaValok.h"
-#include "recipe.h"
+#include "../Ingridient/ingridient.h"
+#include "../HozzaValok/hozzaValok.h"
+#include "../Recipe/recipe.h"
 
 using namespace std;
 

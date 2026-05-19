@@ -1,4 +1,5 @@
 #include "recipeBook.h"
+#include "../memtrace.h"
 
 RecipeBook::RecipeBook() {}
 

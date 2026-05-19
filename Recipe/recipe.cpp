@@ -1,5 +1,6 @@
-#include "recipe.h"
 #include <ostream>
+#include "recipe.h"
+#include "../memtrace.h"
 
 Recipe::Recipe()
     : id(0), name(""), description(""), kategoria(Kategoria::ISMERETLEN), elkeszitesiIdo(0) {}

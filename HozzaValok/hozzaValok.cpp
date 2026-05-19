@@ -1,6 +1,6 @@
-#include "hozzaValok.h"
 #include <ostream>
-
+#include "hozzaValok.h"
+#include "../memtrace.h"
 HozzaValok::HozzaValok() : recipeID(0), ingridientID(0), amount(0) {}
 
 HozzaValok::HozzaValok(int recipeID, int ingridientID, int amount)

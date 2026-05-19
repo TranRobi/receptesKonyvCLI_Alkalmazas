@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <ostream>
-#include "hozzaValok.h"
+#include "../HozzaValok/hozzaValok.h"
 #include "../Ingridient/ingridient.h"
 
 using namespace std;
@@ -26,6 +26,8 @@ class HozzavalokLista {
         const vector<HozzaValok>& getHozzavalok() const;
         void setHozzavalok(const vector<HozzaValok>& h);
         void listForRecipe(int recipeID, const vector<Ingridient>& alapanyagok, ostream& os) const;
+
+        void bekerHozzavalokConsole(int recipeID, const class AlapanyagKonyv& alapanyagKonyv);
 };
 
 #endif

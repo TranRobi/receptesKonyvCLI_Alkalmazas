@@ -17,3 +17,4 @@
 17,Szalonna,g
 18,So,csipet
 19,Fah‚j,g
+20,KakaÃ³,g
